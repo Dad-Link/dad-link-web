@@ -1,0 +1,209 @@
+/* src/Auth/Signup.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Signup Wrapper */
+.signup-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Matrix Background */
+.matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure the canvas stays behind other elements */
+  background: black; /* Solid black background */
+}
+
+/* Signup Card */
+.signup-card {
+  background: rgba(0, 0, 0, 0.75); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 70, 0.5); /* Greenish glow */
+  color: #0F0; /* Green text to match Matrix theme */
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-card h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2em;
+  color: #0F0;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-bottom: 2px solid #0F0;
+  background: transparent;
+  color: #0F0;
+  font-size: 1em;
+}
+
+.signup-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-input:focus {
+  outline: none;
+  border-bottom: 2px solid #00FF00;
+}
+
+.error-message {
+  text-align: center;
+  margin-bottom: 15px;
+  color: red;
+  font-size: 0.9em;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.signup-button {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0F0;
+  color: #000;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+  background-color: #00FF00;
+  transform: scale(1.05);
+}
+
+.back-button {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #777;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+  .signup-card {
+    padding: 30px;
+    max-width: 450px;
+  }
+
+  .signup-card h1 {
+    font-size: 1.8em;
+  }
+
+  .error-message {
+    font-size: 0.95em;
+  }
+
+  .signup-input {
+    padding: 9px 18px;
+    font-size: 0.95em;
+  }
+
+  .signup-button,
+  .back-button {
+    padding: 9px 18px;
+    font-size: 0.95em;
+  }
+}
+
+/* For small tablets and large phones */
+@media (max-width: 768px) {
+  .signup-card {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  .signup-card h1 {
+    font-size: 1.6em;
+  }
+
+  .error-message {
+    font-size: 0.9em;
+  }
+
+  .signup-input {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .signup-button,
+  .back-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .signup-card h1 {
+    font-size: 1.4em;
+  }
+
+  .error-message {
+    font-size: 0.85em;
+  }
+
+  .signup-input {
+    padding: 7px 14px;
+    font-size: 0.85em;
+  }
+
+  .signup-button,
+  .back-button {
+    padding: 7px 14px;
+    font-size: 0.85em;
+    flex: 1 1 100%;
+    margin: 5px 0;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

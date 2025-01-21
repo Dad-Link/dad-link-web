@@ -1,0 +1,224 @@
+/* src/pages/DadDashboard.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Dad Dashboard Wrapper */
+.dad-dashboard-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Matrix Background */
+.dad-dashboard-matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure the canvas stays behind other elements */
+}
+
+/* Dashboard Container */
+.dad-dashboard-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dashboard Title */
+.dad-dashboard-title {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #0F0;
+}
+
+/* Logout Button */
+.dad-dashboard-logout-button {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dad-dashboard-logout-button:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+/* AddChild Component Styles */
+.add-child-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(50, 50, 50, 0.85);
+  padding: 15px;
+  border-radius: 8px;
+  color: #0F0;
+}
+
+.add-child-container h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.add-child-container input {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 2px solid #0F0;
+  background: transparent;
+  color: #0F0;
+  font-size: 1em;
+}
+
+.add-child-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.add-child-container input:focus {
+  outline: none;
+  border-bottom: 2px solid #00FF00;
+}
+
+.add-child-container .error-message {
+  color: red;
+  font-size: 0.9em;
+}
+
+.add-child-container button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0F0;
+  color: #000;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-child-container button:hover {
+  background-color: #00FF00;
+  transform: scale(1.05);
+}
+
+/* Children List */
+.dad-dashboard-children-list {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Child Card */
+.dad-dashboard-child-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #0F0;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dad-dashboard-child-card:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.dad-dashboard-child-card p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+  .dad-dashboard-container {
+    padding: 30px;
+  }
+
+  .dad-dashboard-title {
+    font-size: 1.8em;
+  }
+
+  .dad-dashboard-logout-button {
+    padding: 9px 18px;
+    font-size: 0.95em;
+  }
+
+  .dad-dashboard-child-card {
+    padding: 12px;
+    font-size: 0.95em;
+  }
+}
+
+/* For small tablets and large phones */
+@media (max-width: 768px) {
+  .dad-dashboard-container {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  .dad-dashboard-title {
+    font-size: 1.6em;
+  }
+
+  .dad-dashboard-logout-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .dad-dashboard-child-card {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .dad-dashboard-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .dad-dashboard-title {
+    font-size: 1.4em;
+  }
+
+  .dad-dashboard-logout-button {
+    padding: 7px 14px;
+    font-size: 0.85em;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .dad-dashboard-children-list {
+    max-width: 100%;
+  }
+
+  .dad-dashboard-child-card {
+    padding: 8px;
+    font-size: 0.85em;
+  }
+}
